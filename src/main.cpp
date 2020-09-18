@@ -1,5 +1,5 @@
-#include "include.h"
-#include "oneNueron.h"
+#include "../headers/include.h"
+#include "../headers/oneNueron.h"
 
 int main(int argc, char const *argv[])
 {

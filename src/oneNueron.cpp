@@ -1,4 +1,4 @@
-#include "oneNueron.h"
+#include "../headers/oneNueron.h"
 
 oneNueron::oneNueron(int arg, string str)
 {
@@ -71,7 +71,7 @@ void oneNueron::trainNeuron(double input, double expectedResult)
 void oneNueron::loadWeightandSmoothFromFile()
 {
     ifstream file;
-    string nameFile = "settings" + m_nameOfWork + ".txt";
+    string nameFile = "res/settings" + m_nameOfWork + ".txt";
     file.open(nameFile);
     if(file.is_open())
     {
@@ -88,8 +88,7 @@ void oneNueron::loadWeightandSmoothFromFile()
 void oneNueron::saveWeightandSmoothInFile()
 {
     ofstream file;
-    string nameFile = "settings" + m_nameOfWork + ".txt";
-    file.open("settings" + m_nameOfWork + ".txt");
+    file.open("res/settings" + m_nameOfWork + ".txt");
     if(file.is_open())
     {
         cout << "Saving weight and smooth in file" << endl;
